@@ -16,3 +16,12 @@ function mon_theme_enqueue_styles()
     wp_enqueue_style('custom-style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'mon_theme_enqueue_styles');
+
+function custom_scripts()
+{
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/script.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'custom_scripts');
+
+// Enable featured images
+add_theme_support('post-thumbnails');
