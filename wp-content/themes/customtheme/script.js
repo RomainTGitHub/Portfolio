@@ -1,31 +1,14 @@
-//Script pour l'apparition en fondu des sections//
 document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.fade-in');
-    const observerOptions = {
-        root: null,
-        threshold: 0.5 // 40% de la section doit être visible
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Arrêter d'observer après l'effet de fondu
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-});
-
-//Script pour le chargement de la page//
-document.addEventListener('DOMContentLoaded', function () {
+    // Script pour le chargement de la page
     window.onload = function () {
         let percentage = 0;
         const progressBar = document.querySelector('#preloader .progress-bar div');
         const loadingText = document.querySelector('#preloader .loading-percentage');
+
+        if (!progressBar || !loadingText) {
+            console.error('Progress bar or loading text element not found.');
+            return;
+        }
 
         const simulateLoading = () => {
             const increment = Math.random() * 10; // Random increment to simulate real loading
@@ -36,12 +19,42 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(simulateLoading, 90); // Call the function recursively with a faster delay
             } else {
                 const preloader = document.getElementById('preloader');
-                preloader.style.opacity = '0';
-                preloader.style.visibility = 'hidden';
-                preloader.style.transition = 'opacity 0.5s ease, visibility 0.5s';
+                if (preloader) {
+                    preloader.style.transition = 'opacity 0.5s ease, visibility 0.5s';
+                    preloader.style.opacity = '0';
+                    preloader.style.visibility = 'hidden';
+                    setTimeout(() => {
+                        preloader.remove();
+                        startFadeInAnimation();
+                    }, 500); // Wait for the fade-out transition to finish
+                } else {
+                    console.error('Preloader element not found.');
+                }
             }
         };
 
         simulateLoading();
     };
+
+    // Function to start the fade-in animation of sections
+    function startFadeInAnimation() {
+        const sections = document.querySelectorAll('.fade-in');
+        const observerOptions = {
+            root: null,
+            threshold: 0.25 // 28% de la section doit être visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Arrêter d'observer après l'effet de fondu
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    }
 });

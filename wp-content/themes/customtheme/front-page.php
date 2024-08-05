@@ -7,12 +7,9 @@ get_header();
         <!-- Section À propos de nous -->
         <section id="about-us" class="fade-in">
             <div class="container">
-                <h2>Bienvenue sur mon portfolio. </h2>
-                <p>Vous-y retrouverez mon parcours ainsi que les différents projets sur lequels j'ai travaillé</p>
+                <h2>Bienvenue sur mon portfolio</h2>
+                <p>Vous-y retrouverez mon parcours ainsi que les différents projets sur lequels j'ai travaillé.</p>
             </div>
-        </section>
-
-        <section class="projets fade-in">
 
             <div class="card-container">
                 <?php
@@ -56,7 +53,7 @@ get_header();
                         endif;
                     endwhile;
                 else : ?>
-                    <p>No posts found.</p>
+                    <p>Aucun posts trouvés.</p>
                 <?php endif;
 
                 // Reset post data
@@ -68,7 +65,16 @@ get_header();
 
         <section class="competences fade-in">
             <h2>Mes compétences</h2>
-            <p>Durant mes formations et mes expériences, j'ai pu acquérir un certains nombres de compétences</p>
+            <p>Durant mes formations et mes expériences, j'ai pu acquérir un certains nombres de compétences.</p>
+            <div class="skills-list">
+                <ul>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                </ul>
+            </div>
         </section>
 
         <?php
