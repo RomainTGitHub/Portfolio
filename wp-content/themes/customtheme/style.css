@@ -181,6 +181,70 @@ header {
     color: white;
 }
 
+/* CSS pour l'effet de fondu */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ECF8F6;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#preloader .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #226D68;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#preloader .progress-bar {
+    width: 80%;
+    background: #f3f3f3;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#preloader .progress-bar div {
+    height: 10px;
+    width: 0;
+    background: #226D68;
+    border-radius: 5px;
+    animation: load 3s ease-in-out infinite;
+}
+
+#preloader .loading-percentage {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #3498db;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     .card-container {

@@ -15,6 +15,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <div id="preloader">
+        <div class="loader"></div>
+        <div class="progress-bar">
+            <div></div>
+        </div>
+        <div class="loading-percentage">0%</div>
+    </div>
     <header>
         <h1 class="site-title">Mon Portfolio</h1>
     </header>

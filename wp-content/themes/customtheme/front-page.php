@@ -5,14 +5,14 @@ get_header();
 <div id="content" class="site-content">
     <div id="primary" class="content-area">
         <!-- Section À propos de nous -->
-        <section id="about-us">
+        <section id="about-us" class="fade-in">
             <div class="container">
                 <h2>Bienvenue sur mon portfolio. </h2>
                 <p>Vous-y retrouverez mon parcours ainsi que les différents projets sur lequels j'ai travaillé</p>
             </div>
         </section>
 
-        <section class="projets">
+        <section class="projets fade-in">
 
             <div class="card-container">
                 <?php
@@ -66,12 +66,10 @@ get_header();
 
         </section>
 
-        <section class="competences">
+        <section class="competences fade-in">
             <h2>Mes compétences</h2>
-            <p>Durant mes formations et expériences, j'ai pu acquérir un certains nombres de compétences</p>
-
+            <p>Durant mes formations et mes expériences, j'ai pu acquérir un certains nombres de compétences</p>
         </section>
-
 
         <?php
         get_footer();
