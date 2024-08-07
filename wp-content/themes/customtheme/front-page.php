@@ -70,7 +70,7 @@ get_header();
                 <div class="skill">
                     <div class="skill-icon">🔧</div>
                     <h3>Installation WordPress</h3>
-                    <div class="skill-description">Capacité à installer et configurer WordPress efficacement.</div>
+                    <div class="skill-description">Capacité à installer et configurer WordPress correctement.</div>
                     <div class="progress-bar">
                         <div class="progress-bar-inner" style="width: 85%;"></div>
                     </div>

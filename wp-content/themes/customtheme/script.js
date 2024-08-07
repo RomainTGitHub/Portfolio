@@ -71,10 +71,10 @@ function updateDarkModeButton() {
     if (document.body.classList.contains('dark-mode')) {
         darkModeButton.innerHTML = '☀️';
         darkModeButton.style.backgroundColor = '#fff';
-        darkModeButton.style.color = '#000';
+        darkModeButton.style.color = '#292929';
     } else {
         darkModeButton.innerHTML = '🌙';
-        darkModeButton.style.backgroundColor = '#000';
+        darkModeButton.style.backgroundColor = '#292929';
         darkModeButton.style.color = '#fff';
     }
 }
@@ -82,6 +82,8 @@ function updateDarkModeButton() {
 document.addEventListener('DOMContentLoaded', () => {
     updateDarkModeButton();
 });
+
+// Fonction pour la modale de contact
 
 document.addEventListener("DOMContentLoaded", function () {
     // Récupérer les éléments

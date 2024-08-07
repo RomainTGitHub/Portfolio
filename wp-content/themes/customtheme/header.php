@@ -21,7 +21,6 @@
     <button id="contact-cta">Contact</button>
 
     <div id="contact-modal" style="display:none;">
-        <div class="modal-overlay"></div> <!-- Ajout de l'overlay -->
         <div class="modal-content">
             <span class="close">&times;</span>
             <?php echo do_shortcode('[contact-form-7 id="3a1f67a" title="Formulaire de contact"]'); ?>

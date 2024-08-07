@@ -32,12 +32,20 @@ h2 {
     font-size: 5em;
     color: #18534F;
     text-align: center;
+    user-select: none;
+    /* Empêche la sélection du texte */
+    pointer-events: none;
+    /* Empêche les interactions comme les clics */
 }
 
 h3 {
     font-size: 3em;
     color: #18534F;
     text-align: center;
+    user-select: none;
+    /* Empêche la sélection du texte */
+    pointer-events: none;
+    /* Empêche les interactions comme les clics */
 }
 
 p,
@@ -46,6 +54,10 @@ li {
     color: #226D68;
     text-align: center;
     margin-bottom: 50px;
+    user-select: none;
+    /* Empêche la sélection du texte */
+    pointer-events: none;
+    /* Empêche les interactions comme les clics */
 }
 
 header {
@@ -60,8 +72,7 @@ header {
     position: relative;
 }
 
-#particles-js,
-#particles-js-footer {
+#particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -79,6 +90,7 @@ header {
     position: relative;
     z-index: 1;
     pointer-events: none;
+    user-select: none;
 }
 
 /* Container for the cards */
@@ -262,7 +274,7 @@ header {
 
 .progress-bar {
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: #ECF8F6;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 10px;
@@ -270,7 +282,7 @@ header {
 
 .progress-bar-inner {
     height: 10px;
-    background-color: #4caf50;
+    background-color: #226D68;
 }
 
 footer {
@@ -345,13 +357,14 @@ footer {
     bottom: -3px;
     right: 10px;
     padding: 10px 20px;
-    background-color: #000;
+    background-color: #292929;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
-    z-index: 1000;
+    z-index: 1001;
+    opacity: 80%;
 }
 
 #dark-mode-toggle:hover {
@@ -387,7 +400,7 @@ footer {
 }
 
 .dark-mode .progress-bar-inner {
-    background-color: #76ff03;
+    background-color: #226D68;
 }
 
 .dark-mode p,
@@ -443,6 +456,7 @@ footer {
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Animation pour l'overlay */
@@ -575,7 +589,10 @@ footer {
 }
 
 /* Style for the CTA button */
+
 #contact-cta {
+    font-family: 'QuickSand';
+    font-weight: 600;
     position: fixed;
     bottom: -2px;
     right: 80px;
@@ -586,7 +603,8 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
-    z-index: 1000;
+    z-index: 1001;
+    opacity: 80%;
 }
 
 #contact-cta:hover {
@@ -608,6 +626,18 @@ footer {
 @media (max-width: 992px) {
     .card-container {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
+
+@media (max-width: 950px) {
+    #dark-mode-toggle {
+        bottom: 120px;
+        right: -3px;
+    }
+
+    #contact-cta {
+        bottom: 70px;
+        right: -3px;
     }
 }
 
@@ -667,13 +697,15 @@ footer {
     }
 }
 
+@media (max-width: 450px) {
+    .site-footer p {
+        font-size: 0.8em;
+    }
+}
+
 @media (max-width: 375px) {
     h3 {
         font-size: 1em;
-    }
-
-    .site-footer p {
-        font-size: 0.8em;
     }
 
     .loading-percentage {
