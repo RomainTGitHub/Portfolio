@@ -44,7 +44,7 @@ get_header();
                                     </div>
                                     <div class="overlay">
                                         <div class="overlay-content">
-                                            <i class="fas fa-external-link-alt"></i>
+                                            <i class="fa-brands fa-github"></i>
                                         </div>
                                     </div>
                                 </div>
