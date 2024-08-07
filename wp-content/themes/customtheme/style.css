@@ -32,20 +32,12 @@ h2 {
     font-size: 5em;
     color: #18534F;
     text-align: center;
-    user-select: none;
-    /* Empêche la sélection du texte */
-    pointer-events: none;
-    /* Empêche les interactions comme les clics */
 }
 
 h3 {
     font-size: 3em;
     color: #18534F;
     text-align: center;
-    user-select: none;
-    /* Empêche la sélection du texte */
-    pointer-events: none;
-    /* Empêche les interactions comme les clics */
 }
 
 p,
@@ -54,10 +46,6 @@ li {
     color: #226D68;
     text-align: center;
     margin-bottom: 50px;
-    user-select: none;
-    /* Empêche la sélection du texte */
-    pointer-events: none;
-    /* Empêche les interactions comme les clics */
 }
 
 header {
@@ -90,7 +78,6 @@ header {
     position: relative;
     z-index: 1;
     pointer-events: none;
-    user-select: none;
 }
 
 /* Container for the cards */
