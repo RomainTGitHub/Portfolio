@@ -16,6 +16,18 @@ body {
     width: 100%;
 }
 
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+p,
+h3,
+.card-title,
+.card-content,
+.site-title {
+    transition: color 0.3s;
+}
+
 h2 {
     font-size: 5em;
     color: #18534F;
@@ -181,25 +193,84 @@ header {
     text-align: center;
 }
 
-.skills-list {
-    display: flex;
-    justify-content: center;
-    /* Centre la liste horizontalement */
-    align-items: center;
-    /* Centre le contenu verticalement */
+#skills {
+    padding: 20px;
+    background-color: #f9f9f9;
     text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+.skill {
+    position: relative;
+    width: calc(100% / 3 - 40px);
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.skill-inner {
+    transition: transform 0.3s;
+}
+
+.skill:hover .skill-inner {
+    transform: scale(1.05);
+}
+
+.skill:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.skill:hover .skill-description {
+    opacity: 1;
+}
+
+
+.progress-bar {
     width: 100%;
-    /* Assurez-vous que le conteneur prend toute la largeur disponible */
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
 }
 
-.skills-list ul {
-    padding: 0;
-    /* Supprime le padding par défaut */
-}
-
-.skills-list li {
-    margin: 0 10px;
-    /* Espacement horizontal entre les éléments */
+.progress-bar-inner {
+    height: 10px;
+    background-color: #4caf50;
 }
 
 footer {
@@ -269,6 +340,264 @@ footer {
     color: #ffffff;
 }
 
+#dark-mode-toggle {
+    position: fixed;
+    bottom: -3px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    z-index: 1000;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+    /* Texte plus clair */
+}
+
+.dark-mode #skills {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .skill {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    /* Texte plus clair */
+}
+
+.dark-mode .skill-icon,
+.dark-mode .skill-description {
+    color: #e0e0e0;
+    /* Texte plus clair */
+}
+
+.dark-mode .progress-bar {
+    background-color: #444;
+}
+
+.dark-mode .progress-bar-inner {
+    background-color: #76ff03;
+}
+
+.dark-mode p,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode .card-title,
+.dark-mode .card-content,
+.dark-mode .site-title {
+    color: #e0e0e0;
+    /* Texte plus clair */
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #444;
+    /* Fond du header et du footer en mode sombre */
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-mode .card {
+    background-color: #333;
+}
+
+.dark-mode .modal-content {
+    background-color: #444 !important;
+}
+
+.dark-mode .wpcf7-text {
+    background-color: #e0e0e0 !important;
+}
+
+.dark-mode .wpcf7-textarea {
+    background-color: #e0e0e0 !important;
+}
+
+/* Style pour l'overlay */
+#contact-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /* Augmente le z-index pour s'assurer que la modale est au-dessus */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Désactive le scroll pour la modale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation pour l'overlay */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Derrière les particules */
+}
+
+/* Style pour le contenu de la modale */
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    /* Largeur de 80% de la fenêtre */
+    max-width: 600px;
+    /* Largeur maximale de la modale */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 3;
+    /* Devant les particules */
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style pour le bouton de fermeture de la modale*/
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* Ajouter une transition pour l'effet de survol */
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    /* Assombrir le bouton au survol */
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.1);
+    /* Agrandir le bouton au survol */
+}
+
+/* Style pour le formulaire Contact Form 7 : Formulaire de contact */
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.wpcf7-form p {
+    margin-bottom: 15px;
+}
+
+.wpcf7-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.wpcf7-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.wpcf7-form input[type="submit"] {
+    background-color: #226D68;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wpcf7-form input[type="submit"]:hover {
+    background-color: #18534F;
+    transform: scale(1.1);
+}
+
+.wpcf7-response-output {
+    border: none !important;
+    font-family: 'QuickSand' !important;
+    color: red;
+}
+
+.wpcf7-not-valid-tip {
+    font-size: 0.7em !important;
+}
+
+/* Style for the CTA button */
+#contact-cta {
+    position: fixed;
+    bottom: -2px;
+    right: 80px;
+    padding: 10px 20px;
+    background-color: #226D68;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    z-index: 1000;
+}
+
+#contact-cta:hover {
+    background-color: #18534F;
+    transform: scale(1.1);
+}
+
+.competences {
+    margin-bottom: 50px;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     .card-container {
@@ -303,6 +632,10 @@ footer {
         font-size: 6rem;
         flex-wrap: nowrap;
     }
+
+    .skill {
+        width: calc(100% - 40px);
+    }
 }
 
 @media (max-width: 576px) {
@@ -327,6 +660,31 @@ footer {
         flex-wrap: nowrap;
     }
 }
+
+@media (max-width: 1024px) {
+    .skill {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 375px) {
+    h3 {
+        font-size: 1em;
+    }
+
+    .site-footer p {
+        font-size: 0.8em;
+    }
+
+    .loading-percentage {
+        display: none;
+    }
+
+    .site-title {
+        font-size: 3em;
+    }
+}
+
 
 /* Palette de couleur
 

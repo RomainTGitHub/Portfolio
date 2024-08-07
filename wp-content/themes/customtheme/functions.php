@@ -25,3 +25,6 @@ add_action('wp_enqueue_scripts', 'custom_scripts');
 
 // Enable featured images
 add_theme_support('post-thumbnails');
+
+// Hide the WordPress admin bar for all users
+add_filter('show_admin_bar', '__return_false');

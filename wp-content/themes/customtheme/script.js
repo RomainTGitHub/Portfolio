@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const sections = document.querySelectorAll('.fade-in');
         const observerOptions = {
             root: null,
-            threshold: 0.25 // 28% de la section doit être visible
+            threshold: 0.15 // 20% de la section doit être visible
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
@@ -58,3 +58,55 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// Fonction pour le bouton Darkmode/Lightmode
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    updateDarkModeButton();
+}
+
+function updateDarkModeButton() {
+    const darkModeButton = document.getElementById('dark-mode-toggle');
+    if (document.body.classList.contains('dark-mode')) {
+        darkModeButton.innerHTML = '☀️';
+        darkModeButton.style.backgroundColor = '#fff';
+        darkModeButton.style.color = '#000';
+    } else {
+        darkModeButton.innerHTML = '🌙';
+        darkModeButton.style.backgroundColor = '#000';
+        darkModeButton.style.color = '#fff';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateDarkModeButton();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Récupérer les éléments
+    var modal = document.getElementById("contact-modal");
+    var btn = document.getElementById("contact-cta");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Ouvrir la modale lorsque le bouton est cliqué
+    btn.onclick = function () {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Désactiver le scroll
+    }
+
+    // Fermer la modale lorsque l'utilisateur clique sur <span> (x)
+    span.onclick = function () {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Réactiver le scroll
+    }
+
+    // Fermer la modale lorsque l'utilisateur clique en dehors de la modale
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Réactiver le scroll
+        }
+    }
+});
+
