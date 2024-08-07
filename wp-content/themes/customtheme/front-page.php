@@ -18,7 +18,7 @@ get_header();
                     'post_type' => 'post', // Change 'post' to your custom post type if needed
                     'posts_per_page' => -1, // Retrieve all posts
                     'orderby' => 'date', // Order by date
-                    'order' => 'ASC' // ASC for ascending order (oldest to newest)
+                    'order' => 'DESC' // DESC for descending order (newest to oldest)
                 );
 
                 // Custom query
