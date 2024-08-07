@@ -44,7 +44,7 @@ get_header();
                                     </div>
                                     <div class="overlay">
                                         <div class="overlay-content">
-                                            <i class="fa-solid fa-arrow-up-right-from-square fa-shake"></i>
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                         </div>
                                     </div>
                                 </div>
