@@ -8,7 +8,8 @@ get_header();
         <section id="about-us" class="fade-in">
             <div class="container">
                 <h2>Bienvenue sur mon portfolio</h2>
-                <p>Vous-y retrouverez mon parcours ainsi que les différents projets sur lequels j'ai travaillé.</p>
+                <p>Vous y retrouverez mon parcours ainsi que les différents projets sur lequels j'ai travaillé. <br>
+                    Cliquez sur les cards pour en savoir plus ou pour aller sur le repo Github correspondant au projet !</p>
             </div>
 
             <div class="card-container">
@@ -44,7 +45,7 @@ get_header();
                                     </div>
                                     <div class="overlay">
                                         <div class="overlay-content">
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            <i class="fas fa-external-link-alt"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +66,7 @@ get_header();
 
         <section class="competences fade-in">
             <h2>Mes compétences</h2>
-            <p>Durant mes formations et mes expériences, j'ai pu acquérir un certains nombres de compétences.</p>
+            <p>Durant mes formations et mes expériences, j'ai pu acquérir un certain nombre de compétences.</p>
             <div class="skills-container">
                 <div class="skill">
                     <div class="skill-icon">🔧</div>
@@ -112,7 +113,7 @@ get_header();
                 <div class="skill">
                     <div class="skill-icon">🔌</div>
                     <h3>Plugins</h3>
-                    <div class="skill-description">Savoir utiliser et installer des plugins WordPress.</div>
+                    <div class="skill-description">Capacité à utiliser et à installer des plugins WordPress.</div>
                     <div class="progress-bar">
                         <div class="progress-bar-inner" style="width: 80%;"></div>
                     </div>
@@ -149,6 +150,8 @@ get_header();
                         <div class="progress-bar-inner" style="width: 75%;"></div>
                     </div>
                 </div>
+
+                <!-- Ajouter d'autres compétences si necessaire dans le futur -->
 
             </div>
         </section>
