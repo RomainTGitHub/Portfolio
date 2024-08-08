@@ -73,7 +73,7 @@ get_header();
                     <h3>Installation WordPress</h3>
                     <div class="skill-description">Capacité à installer et configurer WordPress correctement.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 85%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -81,7 +81,7 @@ get_header();
                     <h3>HTML/CSS</h3>
                     <div class="skill-description">Connaissance approfondie de HTML et CSS pour le développement frontend.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 90%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -89,7 +89,7 @@ get_header();
                     <h3>PHP</h3>
                     <div class="skill-description">Maîtrise de PHP pour le développement backend de WordPress.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 80%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@ get_header();
                     <h3>JavaScript jQuery</h3>
                     <div class="skill-description">Utilisation de JavaScript et jQuery pour des interactions dynamiques.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 75%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
 
@@ -107,7 +107,7 @@ get_header();
                     <h3>Thèmes</h3>
                     <div class="skill-description">Création et personnalisation de thèmes WordPress.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 70%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -115,7 +115,7 @@ get_header();
                     <h3>Plugins</h3>
                     <div class="skill-description">Capacité à utiliser et à installer des plugins WordPress.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 80%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -123,7 +123,7 @@ get_header();
                     <h3>Bonnes Pratiques</h3>
                     <div class="skill-description">Connaissance des bonnes pratiques de développement WordPress.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 80%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -131,7 +131,7 @@ get_header();
                     <h3>Sécurité</h3>
                     <div class="skill-description">Connaissance des pratiques de sécurité pour protéger les sites WordPress.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 85%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -139,7 +139,7 @@ get_header();
                     <h3>Responsive Design</h3>
                     <div class="skill-description">Maîtrise des concepts de responsive design pour une expérience mobile optimale.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 90%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -147,7 +147,7 @@ get_header();
                     <h3>Gestion de Projets</h3>
                     <div class="skill-description">Compétences en gestion de projets pour assurer la réussite des développements.</div>
                     <div class="progress-bar">
-                        <div class="progress-bar-inner" style="width: 75%;"></div>
+                        <div class="progress-bar-inner" style="width: 100%;"></div>
                     </div>
                 </div>
 
