@@ -335,7 +335,7 @@ footer {
 
 #preloader .loading-percentage {
     margin-top: 10px;
-    font-size: 15em;
+    font-size: 10em;
     color: #ffffff;
 }
 
@@ -676,6 +676,7 @@ footer {
         font-size: 4rem;
         flex-wrap: nowrap;
     }
+
 }
 
 @media (max-width: 1024px) {
@@ -701,12 +702,56 @@ footer {
         font-size: 1em;
     }
 
-    .loading-percentage {
-        display: none;
-    }
 
     .site-title {
         font-size: 3em;
+    }
+}
+
+@media (max-height: 700px) {
+    #contact-modal {
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+        max-height: 80%;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+
+    .wpcf7-form {
+        width: 100%;
+    }
+
+    .wpcf7-form input[type="text"],
+    .wpcf7-form input[type="email"],
+    .wpcf7-form textarea {
+        height: 75%;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .wpcf7-form textarea {
+        resize: vertical;
+        min-height: 50px;
+        /* Réduire la hauteur minimale */
+    }
+
+    .wpcf7-form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
     }
 }
 

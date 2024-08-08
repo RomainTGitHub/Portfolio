@@ -70,10 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     "enable": true,
                     "mode": "repulse"
                 },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
                 "resize": true
             },
             "modes": {
